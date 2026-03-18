@@ -41,7 +41,7 @@ def serv2():
     '_ym_d': '1773754267',
     'BITRIX_SM_LAST_VISIT': '17.03.2026%2018%3A31%3A07',
     'tmr_detect': '0%7C1773754268138',
-}
+    }
 
     headers = {
         'accept': 'application/json, text/javascript, */*; q=0.01',
@@ -77,7 +77,7 @@ def serv3():
     '_ym_visorc': 'b',
     'analytic_id': '1773755324564593',
     '_ga_40TSJRCTXV': 'GS2.1.s1773755323$o1$g1$t1773755330$j53$l0$h0',
-}
+    }
     headers = {
         'accept': 'application/json',
         'accept-language': 'ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7',
@@ -111,7 +111,7 @@ def serv4():
     'mgo_uid': 'WihPLeMlRTJl0InA002m',
     'mgo_cnt': '1',
     'mgo_sid': 'w00atc1qsc11001nc2lq',
-}
+    }
     headers = {
         'Accept': 'application/json, text/plain, */*, application/json, text/plain, */*',
         'Accept-Language': 'ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7',
@@ -135,7 +135,90 @@ def serv4():
     }
     response = requests.put('https://tochka-vkusa.ru/api/registration', cookies=cookies, headers=headers, json=json_data)
     print(response.json())
+def serv5():
+    cookies = {
+        '_ym_uid': '1773840971236173969',
+        '_ym_d': '1773840971',
+        '_ym_isad': '2',
+        'connect.sid': 's%3AGTUjtP2Ic03GN9ZbAUvtnGr5P8btsOy6.oiAFDpJVxEBPUL4fP%2FxZS4C33Ma8kzfuc2qhLt1gA0k',
+        '_ym_visorc': 'w',
+    }
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+        'Accept': 'application/json, text/plain, */*, application/json, text/plain, */*',
+        'Accept-Language': 'en-US,en;q=0.5',
+        # 'Accept-Encoding': 'gzip, deflate, br, zstd',
+        'Content-Type': 'application/json',
+        'Origin': 'https://arigatosurgut.com',
+        'Connection': 'keep-alive',
+        'Referer': 'https://arigatosurgut.com/',
+        # 'Cookie': '_ym_uid=1773840971236173969; _ym_d=1773840971; _ym_isad=2; connect.sid=s%3AGTUjtP2Ic03GN9ZbAUvtnGr5P8btsOy6.oiAFDpJVxEBPUL4fP%2FxZS4C33Ma8kzfuc2qhLt1gA0k; _ym_visorc=w',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-origin',
+        'Priority': 'u=0',
+    }
+
+    json_data = {
+        'phone': f"+{PHONE[0]} ({PHONE[1:4]}) {PHONE[4:7]}-{PHONE[7:9]}-{PHONE[9:11]}",
+        'password': 'qwerty',
+        'passwordReply': 'qwerty',
+    }
+
+    response = requests.put('https://arigatosurgut.com/api/registration', cookies=cookies, headers=headers, json=json_data)
+    print(response.json())
+def serv6():
+
+    cookies = {
+        'uuid': '73980358-807f-1b98-0c35-cef10a3b8d14',
+        'encodedIP': 'dKlKmBfXaAnAmThBrIfFoLrTaA',
+        'i18n_redirected': 'ru',
+        'theme': 'light',
+        'city_id': '1',
+        'department_id': '0',
+        'delivery_type': 'delivery',
+        '_ym_uid': '1773846500943348776',
+        '_ym_d': '1773846500',
+        '_ym_isad': '2',
+        '__session__id': '165570024269babfe430f0c0.21211349',
+    }
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+        'Accept': 'application/json',
+        'Accept-Language': 'en-US,en;q=0.5',
+        # 'Accept-Encoding': 'gzip, deflate, br, zstd',
+        'Referer': 'https://tichpizza.ru/krasnoyarsk',
+        'baggage': 'sentry-environment=production,sentry-public_key=6d8491d39322eaeadd4ecd8d3fccc5e6,sentry-trace_id=4a16bbd621ce4e2589fbaa08b87cd91c,sentry-org_id=4504076812025856,sentry-transaction=%2F%3Acity%2F%3Acatalog(.*)*,sentry-sampled=false,sentry-sample_rand=0.7503387247392285,sentry-sample_rate=0.25',
+        'content-type': 'application/json',
+        'sentry-trace': '4a16bbd621ce4e2589fbaa08b87cd91c-9da4f11f0e469a3b-0',
+        'sitenew': '1',
+        'uuid': '73980358-807f-1b98-0c35-cef10a3b8d14',
+        'x-api-key': '12773774',
+        'x-brand-id': '1',
+        'x-platform': 'ssr',
+        'Origin': 'https://tichpizza.ru',
+        'Connection': 'keep-alive',
+        # 'Cookie': 'uuid=73980358-807f-1b98-0c35-cef10a3b8d14; encodedIP=dKlKmBfXaAnAmThBrIfFoLrTaA; i18n_redirected=ru; theme=light; city_id=1; department_id=0; delivery_type=delivery; _ym_uid=1773846500943348776; _ym_d=1773846500; _ym_isad=2; __session__id=165570024269babfe430f0c0.21211349',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-origin',
+        'Priority': 'u=0',
+        # Requests doesn't support trailers
+        # 'TE': 'trailers',
+    }
+
+    json_data = {
+        'phone': PHONE[1:],
+        'verify_type': 'call',
+    }
+
+    response = requests.post('https://tichpizza.ru/api/user/register', cookies=cookies, headers=headers, json=json_data)
+    print(response.json())
 #serv1()
 #serv2()
 #serv3()
-serv4()
+#serv4()
+#serv5()
+#serv6()
