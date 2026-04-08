@@ -1,6 +1,6 @@
 import requests
 from pprint import pprint
-PHONE = ""
+PHONE = "79374903531"
 def serv2():
     try:
         cookies = {
@@ -38,7 +38,6 @@ def serv2():
         }
 
         data = f'phone=%2B{PHONE[0]}+({PHONE[1:4]})+{PHONE[4:7]}-{PHONE[7:9]}-{PHONE[9:11]}&action=send&call=Y&zone=Asia%2FYekaterinburg'
-        print(data)
         response = requests.post('https://lv-pizza.ru/ajax/sms_new.php', cookies=cookies, headers=headers, data=data)
         print(f"serv2 - {response.status_code}")
     except:
@@ -85,16 +84,6 @@ def serv3():
         print(f"serv3 - error")
 def serv4():
     try:
-        cookies = {
-            '_ym_uid': '1773770465544724476',
-            '_ym_d': '1773770465',
-            'mgo_uid': 'EBLBuwBm18yu2IWziXDl',
-            'mgo_cnt': '3',
-            '_ym_isad': '2',
-            '_ym_visorc': 'w',
-            'mgo_sid': '60gbtdVqdp11003blexv',
-        }
-
         headers = {
             'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
             'Accept': 'application/json, text/plain, */*, application/json, text/plain, */*',
@@ -117,7 +106,28 @@ def serv4():
             'passwordReply': 'qwerty123',
         }
 
-        response = requests.put('https://tochka-vkusa.ru/api/registration', cookies=cookies, headers=headers, json=json_data)
+        response = requests.put('https://tochka-vkusa.ru/api/registration', headers=headers, json=json_data)
+        if response.status_code !=200:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0',
+                'Accept': 'application/json, text/plain, */*, application/json, text/plain, */*',
+                'Accept-Language': 'en-US,en;q=0.5',
+                # 'Accept-Encoding': 'gzip, deflate, br, zstd',
+                'Content-Type': 'application/json',
+                'Origin': 'https://tochka-vkusa.ru',
+                'Connection': 'keep-alive',
+                'Referer': 'https://tochka-vkusa.ru/',
+                # 'Cookie': '_ym_uid=1773770465544724876; _ym_d=1773770465; mgo_uid=E3LBuwBm18yu2IWziXDl; mgo_cnt=3; _ym_isad=2',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'Priority': 'u=0',
+            }
+
+            json_data = {
+                'phone': f"+{PHONE[0]} ({PHONE[1:4]}) {PHONE[4:7]}-{PHONE[7:9]}-{PHONE[9:11]}",
+            }
+            response = requests.put('https://tochka-vkusa.ru/api/restore', headers=headers, json=json_data)
         print(f"serv4 - {response.status_code}")
     except:
         print(f"serv4 - error")
