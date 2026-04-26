@@ -168,4 +168,11 @@ def urls(number):
             "json":{'phone': f"+{number[0]} ({number[1:4]}) {number[4:7]}-{number[7:]}", 'consent': { 'termsOfUseConsent': True, 'conditionsForTransferringInformationConsent': True, 'loyaltyProgramConsent': True, },},
             "cookies":{'qrator_ssid': '1776356860.510.pIAvyJyFf2ELaK6N-4s894fq6mm7pk3ocqhad0a8uh0vp1t5o', 'puid': '8295dc618b21452882aa27f08e71f209', '_ym_uid': '1776356862599015303', '_ym_d': '1776356862', 'MyRegion': 'www', '_ym_isad': '2', 'AuthSessionId': '615a843c-3266-473d-bdfc-7ced3bce8265',},
         },
+        {
+            "method":"post",
+            "url":"https://sushiman75.ru/api/user/register",
+            "cookies":{ 'uuid': '6f582446-f961-2192-a134-3bd04c072912', 'encodedIP': 'dKlKmBfXaAnAaAtRdWfFoLrTmB', 'i18n_redirected': 'ru', 'theme': 'light', 'city_id': '1', 'department_id': '0', 'delivery_type': 'delivery', '__session__id': '183984034469ee4daec0df94.02819077', },
+            "headers":{ 'User-Agent': ua.random, 'Accept': 'application/json', 'Accept-Language': 'en-US,en;q=0.5', 'Referer': 'https://sushiman75.ru/', 'baggage': 'sentry-environment=production,sentry-public_key=6d8491d39322eaeadd4ecd8d3fccc5e6,sentry-trace_id=dc910e7ccc6b4339b11b1c5cdad4d62d,sentry-org_id=4504076812025856,sentry-transaction=%2F,sentry-sampled=true,sentry-sample_rand=0.09459801085004338,sentry-sample_rate=0.25', 'content-type': 'application/json', 'sentry-trace': 'dc910e7ccc6b4339b11b1c5cdad4d62d-a920f2c9a4a0baca-1', 'sitenew': '1', 'uuid': '6f582446-f961-2192-a134-3bd04c072912', 'x-api-key': '2442642', 'x-brand-id': '1', 'x-platform': 'ssr', 'Origin': 'https://sushiman75.ru', 'DNT': '1', 'Connection': 'keep-alive', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-origin', 'Priority': 'u=0', },
+            "json":{ 'phone': number[1:], 'verify_type': 'call', }       
+        },
     ]

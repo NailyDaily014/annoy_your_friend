@@ -1,6 +1,6 @@
 import requests
-from services import urls
-PHONE = "79276388363"
+from debug import urls
+PHONE = ""#Example 79222222222
 for i in range(1):
     url_list = urls(PHONE)
     for service in url_list:
