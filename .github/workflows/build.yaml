@@ -10,7 +10,7 @@ jobs:
           python-version: '3.11'
       - run: pip install pyinstaller requests fake_useragent
       - run: pyinstaller --onefile --name bomber src/main.py
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: bomber-exe
           path: dist/bomber.exe
