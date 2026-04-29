@@ -15,6 +15,14 @@ def urls(number):
             "json": { 'phone': number, 'recaptcha': 1, },
         },
         {
+            'info': {"type":"banner"},
+            'method': 'post',
+            "url": 'https://rest.beeline.tv/api_v3/service/ottUser/action/login',
+            "headers": {'Accept': 'application/json', 'Accept-Language': 'ru,en;q=0.9,cy;q=0.8,uz;q=0.7', 'Connection': 'keep-alive', 'Content-type': 'application/json', 'Origin': 'https://beeline.tv', 'Referer': 'https://beeline.tv/', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site', 'User-Agent': ua.random, 'sec-ch-ua': '"Chromium";v="112", "YaBrowser";v="23", "Not:A-Brand";v="99"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Windows"',},
+            "cookies":None,
+            "json": {'apiVersion': '4.7', 'ks': 'djJ8NDc4fJ67ssobdkgzEyRlKrgDESU-YNHlna35sk7SyuRFhdLCtyrgl3iPF7BZUeR1ZpoD0APNbOn6bmJT7XtFVFsxqZGZS2EuPgfhPM3cZrfqiS9vtK6d5ft3EkT3Z2Zy4RlEqQixOqyALefGLHBL6xq43LGFsKZATT-V3TUBPrXmCuYIaBz-O_Yiift7G6g8qIeatVH9tStZ_IC0zvp9gksXdTkWMQlJxZ0rZD_XrKTJ127xmkBPZEQ0vvR7-4VISBTxPDrMVVk1rr8yllcNnj3ZGmd8wxlkBdMK0JPiJYX17nxS7MZK9VADGBGywnd7x0deyB07ftfpgsONgq59oX4GE7A=', 'username': number[1:], 'password': '123456', 'udid': '4FECD4C72FDF2D28', 'partnerId': '478', 'extraParams': {'devicedetails': {'value': '{"tveversion":"12.8.1","family":"pcmac","manufacturer":"Windows 10","model":"Yandex 23 (23.5.2.625)","osversion":null,"serialnumber":null}', 'objectType': 'KalturaStringValue',}, 'loginType': {'value': 'mobileConnectInit', 'objectType': 'KalturaStringValue',}, 'brandID': {'value': '22', 'objectType': 'KalturaStringValue',},},},
+        },
+        {
             "info": {"type": "sms"},
             "method": "post",
             "url": "https://42338.smartomato.ru/account/session",
