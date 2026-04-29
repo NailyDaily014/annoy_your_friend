@@ -1,6 +1,6 @@
 import requests
-from debug import urls
-PHONE = ""#Example 79222222222
+from services import urls
+PHONE = "79374903539"#Example 79222222222
 for i in range(1):
     url_list = urls(PHONE)
     for service in url_list:
@@ -16,6 +16,7 @@ for i in range(1):
                 timeout=5
             )
             print(response.status_code)
+            print(response.text)
             if len(response.text)<200:
                 print(response.text)
         except:
